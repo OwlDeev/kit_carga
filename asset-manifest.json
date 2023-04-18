@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kit_carga/static/css/main.1559ba6d.css",
+    "main.js": "/kit_carga/static/js/main.20d4a1f6.js",
+    "index.html": "/kit_carga/index.html",
+    "main.1559ba6d.css.map": "/kit_carga/static/css/main.1559ba6d.css.map",
+    "main.20d4a1f6.js.map": "/kit_carga/static/js/main.20d4a1f6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1559ba6d.css",
+    "static/js/main.20d4a1f6.js"
+  ]
+}
