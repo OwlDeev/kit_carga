@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import { NavLink } from "react-router-dom";
 
 function Home() {
+
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
@@ -46,6 +47,13 @@ function Home() {
               Cargar archivos y bajar kit
             </Button>
           </div>
+        </div>
+      </Grid>
+      <Grid item xs={2}></Grid>
+      <Grid item xs={2}></Grid>
+      <Grid item xs={8}>
+        <div className="div-margin-bottom">
+
         </div>
       </Grid>
       <Grid item xs={2}></Grid>

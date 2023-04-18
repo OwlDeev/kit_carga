@@ -1,7 +1,6 @@
 import "../css/Configuracion.css";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { useState } from "react";
 import { Checkbox, FormControlLabel } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -11,6 +10,10 @@ import Button from "@mui/material/Button";
 import SaveIcon from "@mui/icons-material/Save";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { useState, useEffect } from "react";
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { db } from '../firebase';
+import { useCollection } from '../data/getUsuarios';
 
 function Home() {
   // CHECK TEMPLATE -- INICIO
@@ -178,6 +181,8 @@ function Home() {
   };
 
   //SELECT TEMPLATE -- FIN
+
+  const { data, loading, error } = useCollection('usuarios');
 
   return (
     <>
