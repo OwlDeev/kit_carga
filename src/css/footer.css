@@ -1,0 +1,17 @@
+footer{
+    background-color: #000000;
+    color: white;
+    margin-top: 50px;
+}
+
+.logoFooter{
+    width: 20px;
+}
+
+.gridItemFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}

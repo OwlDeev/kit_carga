@@ -2,90 +2,6 @@ import JSZip from "jszip";
 import { saveAs } from "file-saver";
 
 export const initializeZipGenerator = () => {
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   document
-  //     .getElementById("file-input-web")
-  //     .addEventListener("change", handleFileSelect("1_Sitio/Web"), false);
-  //   document
-  //     .getElementById("file-input-ws")
-  //     .addEventListener("change", handleFileSelect("1_Sitio/Ws"), false);
-  //   document
-  //     .getElementById("file-input-tablas")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/1_Tablas"),
-  //       false
-  //     );
-  //   document
-  //     .getElementById("file-input-alter")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/2_Alter"),
-  //       false
-  //     );
-
-  //   document
-  //     .getElementById("file-input-pasoapaso")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/3_paso_a_paso"),
-  //       false
-  //     );
-
-  //   document
-  //     .getElementById("file-input-indices")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/4_Indices"),
-  //       false
-  //     );
-
-  //   document
-  //     .getElementById("file-input-datos")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/5_Datos"),
-  //       false
-  //     );
-
-  //   document
-  //     .getElementById("file-input-servicios")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/6_Servicios"),
-  //       false
-  //     );
-
-  //   document
-  //     .getElementById("file-input-funciones")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/7_Funciones"),
-  //       false
-  //     );
-
-  //   document
-  //     .getElementById("file-input-mensajes")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/8_Mensajes"),
-  //       false
-  //     );
-
-  //   document
-  //     .getElementById("file-input-triggers")
-  //     .addEventListener(
-  //       "change",
-  //       handleFileSelect("2_Base_de_Datos/9_Triggers"),
-  //       false
-  //     );
-
-  //   document
-  //     .getElementById("file-input-reportes")
-  //     .addEventListener("change", handleFileSelect("3_Reportes"), false);
-
-  //     document.getElementById("generate-zip").addEventListener("click", createAndDownloadFolder, false);
-  // });
 
   const selectedFiles = {};
 
@@ -138,7 +54,7 @@ export const initializeZipGenerator = () => {
 
     // Genera y descarga el archivo ZIP
     const content = await zip.generateAsync({ type: "blob" });
-    saveAs(content, "mi_archivo.zip");
+    saveAs(content, "kit.zip");
   }
 
   function readFileAsText(file) {
