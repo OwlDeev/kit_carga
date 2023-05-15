@@ -256,13 +256,13 @@ function Home() {
         <Grid item xs={2}></Grid>
         <Grid item xs={8}>
           <div className="div-button-template">
-            <Button Disabled variant="contained" endIcon={<DeleteIcon />}>
+            <Button disabled variant="contained" endIcon={<DeleteIcon />}>
               Eliminar
             </Button>
-            <Button variant="contained" endIcon={<AddBoxIcon />}>
+            <Button disabled variant="contained" endIcon={<AddBoxIcon />}>
               Nuevo
             </Button>
-            <Button variant="outlined" startIcon={<SaveIcon />}>
+            <Button disabled variant="outlined" startIcon={<SaveIcon />}>
               Guardar
             </Button>
           </div>
