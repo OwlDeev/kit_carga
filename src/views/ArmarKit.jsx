@@ -35,7 +35,7 @@ function ArmarKit() {
   } = useForm();
 
   const onSubmit = (data) => {
-    createAndDownloadFolder(data.nombre) 
+    createAndDownloadFolder(data.nombre);
   };
 
   //ALERTA AL GENERAR KIT
@@ -68,36 +68,15 @@ function ArmarKit() {
     // Creamos la carpeta principal
     const carpetaPrincipal = zip.folder(nombreCarpetaPrincipal);
 
-    // Creamos la primera subcarpeta llamada "1_Sitio"
-    const subFolder1 = carpetaPrincipal.folder("1_Sitio");
-
-    // Creamos dos subcarpetas dentro de la primera subcarpeta
-    subFolder1.folder("Web");
-    subFolder1.folder("Ws");
-
-    // Creamos la segunda subcarpeta llamada "2_Base_de_Datos"
-    const subFolder2 = carpetaPrincipal.folder("2_Base_de_Datos");
-
-    // Creamos 9 subcarpetas dentro de la segunda subcarpeta
-    subFolder2.folder("1_Tablas");
-    subFolder2.folder("2_Alter");
-    subFolder2.folder("3_paso_a_paso");
-    subFolder2.folder("4_Indices");
-    subFolder2.folder("5_Datos");
-    subFolder2.folder("6_Servicios");
-    subFolder2.folder("7_Funciones");
-    subFolder2.folder("8_Mensajes");
-    subFolder2.folder("9_Triggers");
-
-    // Creamos la tercera subcarpeta llamada "3_Reportes"
-    carpetaPrincipal.folder("3_Reportes");
-
     // Añade los archivos seleccionados a las carpetas/subcarpetas correspondientes
     for (const folder in selectedFiles) {
-      const targetFolder = zip.folder(`${nombreCarpetaPrincipal}/${folder}`);
-      for (const file of selectedFiles[folder]) {
-        const fileContent = await readFileAsText(file);
-        targetFolder.file(file.name, fileContent);
+      if (selectedFiles[folder].length > 0) {
+        // Solo crear la carpeta si tiene archivos
+        const targetFolder = zip.folder(`${nombreCarpetaPrincipal}/${folder}`);
+        for (const file of selectedFiles[folder]) {
+          const fileContent = await readFileAsText(file);
+          targetFolder.file(file.name, fileContent);
+        }
       }
     }
 
@@ -109,7 +88,7 @@ function ArmarKit() {
     } else {
       setTipoAlertaMsj("warning");
     }
-    setCountAlert(countAlert+1)
+    setCountAlert(countAlert + 1);
     setAlerta(true);
   }
 
@@ -314,10 +293,7 @@ function ArmarKit() {
                 helperText={errors.nombre?.message}
                 placeholder="Ingresa el nombre de tu kit"
               />
-              <Button
-                type="submit"
-                variant="contained"
-              >
+              <Button type="submit" variant="contained">
                 Generar kit
               </Button>
             </form>
