@@ -1,17 +1,19 @@
 footer{
     background-color: #000000;
     color: white;
-    margin-top: 50px;
+    top: 79px;
+    position: relative;
 }
 
 .logoFooter{
     width: 20px;
 }
 
-.gridItemFooter{
+.gridItemFooter .Typography{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
+    
 }
+

@@ -74,7 +74,7 @@ function Home() {
       <FormControlLabel
         label="1_Tablas"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[1]}
             onChange={(event) => handleChangeChild2(event, 1)}
           />
@@ -83,7 +83,7 @@ function Home() {
       <FormControlLabel
         label="2_Alter"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[2]}
             onChange={(event) => handleChangeChild2(event, 2)}
           />
@@ -92,7 +92,7 @@ function Home() {
       <FormControlLabel
         label="3_paso_a_paso"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[3]}
             onChange={(event) => handleChangeChild2(event, 3)}
           />
@@ -101,7 +101,7 @@ function Home() {
       <FormControlLabel
         label="4_Indices"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[4]}
             onChange={(event) => handleChangeChild2(event, 4)}
           />
@@ -110,7 +110,7 @@ function Home() {
       <FormControlLabel
         label="5_Datos"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[5]}
             onChange={(event) => handleChangeChild2(event, 5)}
           />
@@ -119,7 +119,7 @@ function Home() {
       <FormControlLabel
         label="6_Servicios"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[6]}
             onChange={(event) => handleChangeChild2(event, 6)}
           />
@@ -128,7 +128,7 @@ function Home() {
       <FormControlLabel
         label="7_Funciones"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[7]}
             onChange={(event) => handleChangeChild2(event, 7)}
           />
@@ -137,7 +137,7 @@ function Home() {
       <FormControlLabel
         label="8_Mensajes"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[8]}
             onChange={(event) => handleChangeChild2(event, 8)}
           />
@@ -146,7 +146,7 @@ function Home() {
       <FormControlLabel
         label="9_Triggers"
         control={
-          <Checkbox
+          <Checkbox disabled
             checked={checked2[9]}
             onChange={(event) => handleChangeChild2(event, 9)}
           />
@@ -157,11 +157,11 @@ function Home() {
 
   const children1 = (
     <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
-      <FormControlLabel
+      <FormControlLabel disabled
         label="Web"
         control={<Checkbox checked1={checked1[0]} onChange={handleChange1_2} />}
       />
-      <FormControlLabel
+      <FormControlLabel disabled
         label="Ws"
         control={<Checkbox checked1={checked1[1]} onChange={handleChange1_3} />}
       />
@@ -201,9 +201,9 @@ function Home() {
                 label="Elige un template"
                 onChange={handleChange}
               >
-                <MenuItem value={10}>Uno</MenuItem>
-                <MenuItem value={20}>Dos</MenuItem>
-                <MenuItem value={30}>Tres</MenuItem>
+                <MenuItem disabled value={10}>Uno</MenuItem>
+                <MenuItem disabled value={20}>Dos</MenuItem>
+                <MenuItem disabled value={30}>Tres</MenuItem>
               </Select>
             </FormControl>
           </div>
@@ -218,7 +218,7 @@ function Home() {
                 control={
                   <Checkbox
                     checked={checked1[0] && checked1[1]}
-                    indeterminate={checked1[0] !== checked1[1]}
+                    disabled indeterminate={checked1[0] !== checked1[1]}
                     onChange={handleChange1_1}
                   />
                 }
@@ -231,7 +231,7 @@ function Home() {
                 label="2_Base_de_Datos"
                 control={
                   <Checkbox
-                    checked={checked2.every(Boolean)}
+                    disabled checked={checked2.every(Boolean)}
                     indeterminate={
                       !checked2.every(Boolean) && checked2.some(Boolean)
                     }
@@ -245,8 +245,8 @@ function Home() {
             <div className="div-conf-carpeta">
               <FormControlLabel
                 label="3_Reportes"
-                control={
-                  <Checkbox checked={checked3[0]} onChange={handleChange3_1} />
+                control={ 
+                  <Checkbox disabled checked={checked3[0]} onChange={handleChange3_1} />
                 }
               />
             </div>
@@ -256,7 +256,7 @@ function Home() {
         <Grid item xs={2}></Grid>
         <Grid item xs={8}>
           <div className="div-button-template">
-            <Button variant="contained" endIcon={<DeleteIcon />}>
+            <Button Disabled variant="contained" endIcon={<DeleteIcon />}>
               Eliminar
             </Button>
             <Button variant="contained" endIcon={<AddBoxIcon />}>

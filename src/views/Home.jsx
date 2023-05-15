@@ -15,23 +15,23 @@ function Home() {
       <Grid item xs={2}></Grid>
       <Grid item xs={8}>
         <div>
-          <h2>Paso 1:</h2>
+          {/* <h2>Paso 1:</h2> */}
           <div>
-            <h3>
+            {/* <h3>
               Se debe configurar un template previo a generar el kit, esta
               configuración contempla saber que carpetas van a ir incluidas en
               el kit y que nombre va a llevar este template creado o asignado{" "}
-            </h3>
-            <Button
+            </h3> */}
+            {/* <Button
               variant="contained"
               className="btn"
               component={NavLink}
               to="/Configuracion"
             >
               Crea o elige un template
-            </Button>
+            </Button> */}
           </div>
-          <h2>Paso 2:</h2>
+          <h2>Paso 1:</h2>
           <div>
             <h3>
               Al tener el template configurado como queremos, estamos listos
