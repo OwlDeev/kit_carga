@@ -15,6 +15,7 @@ import {
   TableRow,
   Paper,
   TextField,
+  Box,
 } from "@mui/material";
 import React from "react";
 import JSZip from "jszip";
@@ -283,19 +284,26 @@ function ArmarKit() {
         <Grid item xs={2}></Grid>
         <Grid item xs={8}>
           <div className="div-button-template">
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <TextField
-                id="outlined-basic"
-                label="Nombre kit"
-                variant="outlined"
-                {...register("nombre", { required: "Este campo es requerido" })}
-                error={Boolean(errors.nombre)}
-                helperText={errors.nombre?.message}
-                placeholder="Ingresa el nombre de tu kit"
-              />
-              <Button type="submit" variant="contained">
-                Generar kit
-              </Button>
+            <form onSubmit={handleSubmit(onSubmit)} className="formBtnTxf">
+                <TextField
+                  className="txfNombreKit"
+                  id="outlined-basic"
+                  label="Nombre kit"
+                  variant="outlined"
+                  {...register("nombre", {
+                    required: "Este campo es requerido",
+                  })}
+                  error={Boolean(errors.nombre)}
+                  helperText={errors.nombre?.message}
+                  placeholder="Ingresa el nombre de tu kit"
+                />
+                <Button
+                  type="submit"
+                  variant="contained"
+                  className="btnGenerarKit"
+                >
+                  Generar kit
+                </Button>
             </form>
           </div>
         </Grid>
