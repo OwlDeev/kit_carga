@@ -38,3 +38,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.txfNombreKit{
+    width: 80%;
+}
+
+.btnGenerarKit{
+    width: 20%;
+    height: 100%;
+}
+
+.formBtnTxf{
+    width: 100%;
+}
+
+.separator{
+    width: 5px;
+    display: flex;
+}
