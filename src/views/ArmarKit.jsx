@@ -129,14 +129,26 @@ function ArmarKit() {
                       </TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell></TableCell>
-                      <TableCell>Web</TableCell>
+                      <TableCell>1_Sitio/Web</TableCell>
+                      <TableCell>Bin</TableCell>
                       <TableCell>
                         <input
                           type="file"
                           id="file-input-web"
                           multiple
-                          onChange={handleFileSelect("1_Sitio/Web")}
+                          onChange={handleFileSelect("1_Sitio/Web/Bin")}
+                        />
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>1_Sitio/Web</TableCell>
+                      <TableCell>Web del proyecto</TableCell>
+                      <TableCell>
+                        <input
+                          type="file"
+                          id="file-input-web"
+                          multiple
+                          onChange={handleFileSelect("1_Sitio/Web/Web")}
                         />
                       </TableCell>
                     </TableRow>
@@ -295,7 +307,7 @@ function ArmarKit() {
                   })}
                   error={Boolean(errors.nombre)}
                   helperText={errors.nombre?.message}
-                  placeholder="Ingresa el nombre de tu kit"
+                  placeholder="Ingresa el nombre de tu proyecto"
                 />
                 <Button
                   type="submit"
