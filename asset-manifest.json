@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/kit_carga/static/css/main.1559ba6d.css",
-    "main.js": "/kit_carga/static/js/main.20d4a1f6.js",
-    "index.html": "/kit_carga/index.html",
-    "main.1559ba6d.css.map": "/kit_carga/static/css/main.1559ba6d.css.map",
-    "main.20d4a1f6.js.map": "/kit_carga/static/js/main.20d4a1f6.js.map"
+    "main.css": "/static/css/main.1c61cf47.css",
+    "main.js": "/static/js/main.8d4b58b6.js",
+    "index.html": "/index.html",
+    "main.1c61cf47.css.map": "/static/css/main.1c61cf47.css.map",
+    "main.8d4b58b6.js.map": "/static/js/main.8d4b58b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.1559ba6d.css",
-    "static/js/main.20d4a1f6.js"
+    "static/css/main.1c61cf47.css",
+    "static/js/main.8d4b58b6.js"
   ]
 }
