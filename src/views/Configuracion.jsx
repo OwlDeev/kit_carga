@@ -12,7 +12,7 @@ import AddBoxIcon from "@mui/icons-material/AddBox";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useState, useEffect } from "react";
 
-function Home() {
+function Configuracion() {
   // CHECK TEMPLATE -- INICIO
   const [checked1, setChecked1] = useState([true, false]);
   const [checked3, setChecked3] = useState([true, false]);
@@ -274,4 +274,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Configuracion;
