@@ -52,12 +52,12 @@ function ArmarKit() {
     selectedFiles[folder] = event.target.files;
   };
 
-  const readFileAsText = (file) => {
+  const readFileAsBlob = (file) => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onload = (event) => resolve(event.target.result);
       reader.onerror = (error) => reject(error);
-      reader.readAsText(file);
+      reader.readAsArrayBuffer(file);
     });
   };
 
@@ -75,7 +75,7 @@ function ArmarKit() {
         // Solo crear la carpeta si tiene archivos
         const targetFolder = zip.folder(`${nombreCarpetaPrincipal}/${folder}`);
         for (const file of selectedFiles[folder]) {
-          const fileContent = await readFileAsText(file);
+          const fileContent = await readFileAsBlob(file);
           targetFolder.file(file.name, fileContent);
         }
       }
@@ -297,25 +297,25 @@ function ArmarKit() {
         <Grid item xs={8}>
           <div className="div-button-template">
             <form onSubmit={handleSubmit(onSubmit)} className="formBtnTxf">
-                <TextField
-                  className="txfNombreKit"
-                  id="outlined-basic"
-                  label="Nombre kit"
-                  variant="outlined"
-                  {...register("nombre", {
-                    required: "Este campo es requerido",
-                  })}
-                  error={Boolean(errors.nombre)}
-                  helperText={errors.nombre?.message}
-                  placeholder="Ingresa el nombre de tu proyecto"
-                />
-                <Button
-                  type="submit"
-                  variant="contained"
-                  className="btnGenerarKit"
-                >
-                  Generar kit
-                </Button>
+              <TextField
+                className="txfNombreKit"
+                id="outlined-basic"
+                label="Nombre kit"
+                variant="outlined"
+                {...register("nombre", {
+                  required: "Este campo es requerido",
+                })}
+                error={Boolean(errors.nombre)}
+                helperText={errors.nombre?.message}
+                placeholder="Ingresa el nombre de tu proyecto"
+              />
+              <Button
+                type="submit"
+                variant="contained"
+                className="btnGenerarKit"
+              >
+                Generar kit
+              </Button>
             </form>
           </div>
         </Grid>

@@ -14,10 +14,10 @@ function App() {
         <AppBar></AppBar>
         <Container>
           <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route exact path="/" element={<Home />} />
-            <Route path="/configuracion" element={<Configuracion />} />
-            <Route path="/armarKit" element={<ArmarKit />} />
+            <Route path="/kit_carga/home" element={<Home />} />
+            <Route exact path="/kit_carga" element={<Home />} />
+            <Route path="/kit_carga/configuracion" element={<Configuracion />} />
+            <Route path="/kit_carga/armarKit" element={<ArmarKit />} />
           </Routes>
         </Container>
         <Footer></Footer>

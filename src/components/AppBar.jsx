@@ -35,7 +35,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/home"
+            href="/kit_carga/home"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -106,7 +106,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               component={NavLink}
-              to="/configuracion"
+              to="/kit_carga/configuracion"
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Configuración
@@ -114,7 +114,7 @@ function ResponsiveAppBar() {
 
             <Button
               component={NavLink}
-              to="/armarKit"
+              to="/kit_carga/armarKit"
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Armar kit
