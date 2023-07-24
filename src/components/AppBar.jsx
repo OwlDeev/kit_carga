@@ -12,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Logo from "../imgs/logo.png";
 import "../css/AppBar.css";
 import { NavLink } from 'react-router-dom';
+import { Margin } from "@mui/icons-material";
 
 const pages = ["Configuración", "Armar kit"];
 
@@ -30,7 +31,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={Logo} className="logo-sonda" alt="logo de sonda" />
+          <img src={Logo} className="logo-sonda" alt="logo de sonda"/>
           <Typography
             variant="h6"
             noWrap
