@@ -35,7 +35,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/kit_carga/home"
+            // href="/kit_carga/home"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -46,7 +46,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            _ KIT DE CARGA
+             KIT DE CARGA
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -104,6 +104,14 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Button
+              component={NavLink}
+              to="/kit_carga/home"
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              Home
+            </Button>
+
             <Button
               component={NavLink}
               to="/kit_carga/configuracion"
